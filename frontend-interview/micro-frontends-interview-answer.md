@@ -1,0 +1,7 @@
+# Micro-Frontends Interview Answer
+
+Micro-frontends extend microservice principles to frontend development by breaking a monolithic UI into smaller, more manageable applications that can be developed, tested, and deployed independently. I've implemented this architecture using several integration approaches depending on project requirements.
+
+For simpler cases, I've used client-side composition with JavaScript frameworks like single-spa to load micro-frontends at runtime in the browser. For more complex scenarios with separate teams, I've implemented server-side composition where micro-frontends are stitched together on the server before being sent to the browser, which improves initial load performance.
+
+The key challenges I address in micro-frontend architecture include establishing consistent design systems across teams, managing shared dependencies to avoid duplicate code, implementing cross-application communication patterns, and setting up build pipelines that support independent deployment while ensuring integration testing. When implemented well, this approach enables larger organizations to scale frontend development across multiple teams while maintaining a cohesive user experience.
