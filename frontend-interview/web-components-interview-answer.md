@@ -1,0 +1,7 @@
+# Web Components Interview Answer
+
+Web Components are a set of browser-native technologies that allow for creating custom, reusable HTML elements with encapsulated functionality. They consist of three main standards: Custom Elements for defining new HTML elements, Shadow DOM for encapsulated styling and markup, and HTML Templates for declaring fragments that can be cloned and reused.
+
+The main advantage of Web Components is their framework-agnostic nature - they work across React, Angular, Vue, or vanilla JavaScript applications, making them ideal for design systems or component libraries that need to support multiple frameworks. The Shadow DOM provides true style encapsulation, preventing outside styles from affecting the component and component styles from leaking out.
+
+When building Web Components, I define a class that extends HTMLElement (or a more specific element), register it with customElements.define(), and implement lifecycle callbacks like connectedCallback and attributeChangedCallback. For broader browser support, I use polyfills where necessary, though modern browser support has improved significantly. While powerful, Web Components have more limited rendering performance optimizations compared to virtual DOM-based frameworks, so I consider this trade-off for performance-critical applications.
