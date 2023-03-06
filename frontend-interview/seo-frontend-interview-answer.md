@@ -1,0 +1,7 @@
+# SEO for Frontend Developers Interview Answer
+
+As a frontend developer, I implement several techniques to improve search engine optimization while building web applications. For content indexing, I ensure proper semantic HTML structure with appropriate heading hierarchy and meaningful element choices that clearly communicate page structure to search engines. I also implement server-side rendering or pre-rendering for JavaScript-heavy applications to ensure content is immediately available to search engine crawlers.
+
+For performance optimization, I focus on Core Web Vitals metrics like Largest Contentful Paint and Cumulative Layout Shift since these are direct ranking factors. This includes optimizing images, implementing responsive design, and ensuring text remains visible during font loading. I use structured data (JSON-LD format) to provide explicit clues about page content, which enables rich results in search listings.
+
+For single-page applications, I implement proper client-side routing with history API and ensure meta tags update dynamically. I also set up appropriate canonical URLs to prevent duplicate content issues, and create an XML sitemap to help search engines discover all important pages. When launching new sites or major updates, I verify robots.txt configuration to ensure critical content is crawlable while protecting sensitive areas.
