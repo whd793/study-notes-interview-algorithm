@@ -1,0 +1,7 @@
+# React Performance Optimization Interview Answer
+
+When optimizing React application performance, I focus on preventing unnecessary renders and optimizing expensive operations. I use React.memo for function components and PureComponent for class components to skip renders when props haven't changed. For components that still need to render often, I keep them small and focused to minimize the work done during each render cycle.
+
+I leverage useMemo to memoize expensive calculations and useCallback to maintain stable function references across renders, especially for callbacks passed to optimized child components. For list rendering, I ensure each item has a stable, unique key and implement virtualization with react-window or react-virtualized when dealing with large datasets.
+
+State management architecture affects performance significantly, so I keep state as local as possible and use context selectively to avoid rendering large component trees when shared state changes. For larger applications, I implement code-splitting with React.lazy and Suspense to reduce the initial bundle size. I also use Chrome DevTools and React DevTools Profiler to identify performance bottlenecks rather than optimizing prematurely.
