@@ -1,0 +1,7 @@
+# JavaScript Memory Management Interview Answer
+
+JavaScript uses automatic memory management through garbage collection, but developers still need to be aware of memory patterns to avoid leaks. Common causes of memory leaks I watch for include unintentionally retaining DOM references, creating closures that capture large objects, and accumulating event listeners without removing them when components unmount.
+
+In React applications, I'm particularly careful about dependencies in useEffect hooks, ensuring proper cleanup functions are returned to prevent stale closures from holding references to outdated state or props. For applications managing large datasets, I implement pagination or virtualization rather than keeping everything in memory at once.
+
+When debugging memory issues, I use Chrome DevTools Memory panel to take heap snapshots and identify retained objects. The allocation timeline helps find patterns of growing memory usage that indicate leaks. For long-running applications like dashboards, I sometimes implement manual dispose patterns for expensive resources, explicitly nullifying references when they're no longer needed to help the garbage collector identify unused memory.
