@@ -1,0 +1,7 @@
+# React Context vs Redux Interview Answer
+
+React Context API and Redux are both state management solutions, but with different strengths and use cases. Context provides a way to pass data through the component tree without manually passing props. It's built into React and is ideal for global themes, user authentication state, or localization data that rarely changes and needs to be accessed by many components.
+
+Redux offers a more structured approach with a single store, pure reducer functions, and actions for state updates. This predictable state container makes complex state transitions more manageable and provides powerful capabilities through middleware for side effects like API calls. I choose Redux when applications have complex state logic, need time-travel debugging, or when state changes frequently with many interactions between different parts of state.
+
+In modern applications, I often use a hybrid approach: Context for simpler global state like themes or authentication, and Redux for complex domains with many interconnected pieces of state. With hooks like useContext and the introduction of Redux Toolkit, both approaches have become more ergonomic and can complement each other in the same application.
