@@ -1,0 +1,7 @@
+# React Router Interview Answer
+
+React Router enables navigation and routing in React applications by rendering different components based on the URL without full page reloads. I implement it by wrapping my application in a Router component (BrowserRouter for browsers with History API support or HashRouter for older browsers), then defining routes with Route components that map URL patterns to specific components.
+
+For dynamic routes with parameters, I use path patterns like '/user/:id' and access these parameters in components via the useParams hook. I handle nested routes by nesting Route components, which is particularly useful for complex layouts with persistent sections and changing content areas. For programmatic navigation, I use the useNavigate hook or the Navigate component to redirect users based on certain conditions.
+
+Protected routes that require authentication are implemented by creating wrapper components that check authentication status and either render the requested component or redirect to a login page. I also implement proper 404 handling with a catch-all route at the end of my route definitions, and use the Outlet component from React Router v6 to define where child routes should render within parent components.
