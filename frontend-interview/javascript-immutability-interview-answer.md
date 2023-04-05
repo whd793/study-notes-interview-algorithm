@@ -1,0 +1,7 @@
+# JavaScript Immutability Interview Answer
+
+Immutability means never changing data once it's created, but instead creating new copies with modifications. In JavaScript applications, I implement immutability to make state changes more predictable, enable optimizations like reference equality checks, and facilitate features like undo/redo or time-travel debugging.
+
+For simple data structures, I use language features like the spread operator to create copies with modifications. With nested objects or arrays, I use a recursive approach or libraries like Immer which provide a simpler mental model through a draft-based API. Immer lets me write code that looks like I'm mutating state while it handles the immutable updates behind the scenes.
+
+In React applications, immutability is particularly important because React often uses reference equality checks to determine if components need to re-render. Mutating objects directly can bypass React's change detection. I also use immutable data patterns in Redux reducers to ensure state transitions are explicit and traceable. For large datasets where copying might be expensive, I sometimes use persistent data structures from libraries like Immutable.js which offer efficient structural sharing between versions.
