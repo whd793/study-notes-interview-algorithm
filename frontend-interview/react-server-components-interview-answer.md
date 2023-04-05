@@ -1,0 +1,7 @@
+# React Server Components Interview Answer
+
+React Server Components represent a paradigm shift in React architecture by enabling components to run directly on the server, with only their output sent to the client. This approach combines the benefits of server rendering with the interactivity of client-side React. The key advantage is being able to access server resources directly from components—like databases or file systems—without building a separate API layer.
+
+Unlike traditional SSR which runs components on both server and client, Server Components stay on the server completely. They can't use hooks, manage state, or attach event handlers, but they can significantly reduce bundle size by keeping large dependencies server-side. Client Components, marked with 'use client' directives, handle interactive elements and client-side state.
+
+I've found this architecture particularly effective for data-heavy applications. Server Components fetch data directly from the database and render it, while nested Client Components add interactivity where needed. This approach improves performance by reducing JavaScript sent to the client and eliminating loading waterfalls from cascading data fetches. It also simplifies architecture by removing the need for separate API endpoints for many data requirements.
