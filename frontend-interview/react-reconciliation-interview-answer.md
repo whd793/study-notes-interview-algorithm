@@ -1,0 +1,7 @@
+# React Reconciliation Interview Answer
+
+Reconciliation is React's algorithm for determining what parts of the UI need to change when state or props update. Instead of rebuilding the entire DOM tree—which would be inefficient—React creates a virtual representation of the UI, compares it with the previous version, and calculates the minimal set of changes needed to update the actual DOM.
+
+The key to this process is the diffing algorithm. When comparing two trees, React first checks element types. If they're different (like div changing to span), it rebuilds the entire subtree. If the types are the same, React updates only the changed attributes and proceeds to recursively compare the children. For lists, React relies on the key prop to track which items have moved, been added, or removed.
+
+This approach significantly improves performance, but requires certain patterns from developers. I ensure stable references for functions passed as props (with useCallback), avoid anonymous components inside render methods, and provide stable, unique keys for list items. Understanding reconciliation helps me identify and fix performance bottlenecks, especially in components that render frequently or handle large data sets.
