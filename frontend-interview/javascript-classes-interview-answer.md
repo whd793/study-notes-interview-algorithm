@@ -1,0 +1,7 @@
+# JavaScript Classes Interview Answer
+
+JavaScript classes, introduced in ES6, provide a cleaner, more familiar syntax for creating objects and dealing with inheritance. Behind the scenes, they're still using JavaScript's prototype-based inheritance model, but the class syntax makes object-oriented programming patterns more accessible, especially for developers coming from class-based languages.
+
+I define classes using the class keyword, with a constructor method for initialization, instance methods for behavior, and static methods for functionality that doesn't require instantiation. The extends keyword establishes inheritance relationships, with the super keyword calling the parent class constructor and methods. Private fields, marked with the # prefix in modern JavaScript, create true encapsulation by making properties inaccessible outside the class.
+
+While classes enhance JavaScript's object-oriented capabilities, I recognize their limitations compared to classes in languages like Java or C#. JavaScript classes are essentially constructor functions with prototype-based inheritance under the hood, and features like private fields had limited browser support until recently. I typically use classes for component models, data structures, or service objects that encapsulate related functionality, while still leveraging JavaScript's functional programming capabilities where appropriate.
