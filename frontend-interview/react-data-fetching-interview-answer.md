@@ -1,0 +1,7 @@
+# React Data Fetching Interview Answer
+
+Data fetching in React components can be implemented using several patterns, each with different tradeoffs. The simplest approach uses the useEffect hook with fetch or axios to make requests when components mount or when dependencies change. I structure this pattern with loading and error states, and follow clean-up patterns for race conditions by using an abort controller or tracking component mounting state.
+
+For more complex applications, I implement custom hooks that encapsulate fetching logic, state management, and caching. This provides reusable, consistent data fetching across components while keeping component code focused on rendering. I've also worked with specialized data fetching libraries like React Query or SWR which provide advanced features like automatic refetching, background updates, optimistic UI, and complex cache invalidation out of the box.
+
+Suspense for data fetching, while still evolving in React, offers a promising declarative approach where components can "suspend" rendering until data is available, with fallbacks handled at the boundary level rather than in each component. For server-rendered applications, I consider where fetching should occur—during build time for static data, on the server for dynamic but cacheable data, or on the client for highly personalized or frequently changing content.
