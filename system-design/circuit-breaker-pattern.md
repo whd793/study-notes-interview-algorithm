@@ -1,0 +1,9 @@
+# Circuit Breaker Pattern
+
+The Circuit Breaker pattern prevents cascading failures in distributed systems by detecting failures and encapsulating logic for handling failing remote service calls. It works like an electrical circuit breaker, automatically detecting failures and stopping attempts to perform operations that are likely to fail.
+
+The pattern involves three states: Closed (normal operation), Open (failing - requests immediately rejected), and Half-Open (testing if service has recovered). When a system is healthy, the circuit is closed. After a specified number of failures, the circuit opens, preventing further requests for a configured timeout period. After this period, the circuit transitions to half-open, allowing a limited number of test requests through. If these succeed, the circuit closes; if they fail, it reopens.
+
+Implementation typically requires tracking failure counts and types, configurable thresholds, timeout periods, and fallback mechanisms. Common libraries include Hystrix (Java), Polly (.NET), and Resilience4j. Advanced implementations may include sliding windows for failure rate calculation and different circuit breakers for different types of failures.
+
+The pattern provides several benefits: it prevents system overload during partial outages, enables graceful degradation through fallbacks, speeds up failure responses instead of waiting for timeouts, and allows failed components to recover. When implementing circuit breakers, it's important to define appropriate fallback strategies, properly categorize different failure types, and ensure adequate monitoring and alerting on circuit state changes.
